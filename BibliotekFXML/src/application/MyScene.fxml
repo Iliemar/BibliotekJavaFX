@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="463.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXMLDocumentController&lt;TableDEmo&gt;">
+   <children>
+      <TableView fx:id="TabelView" editable="true" layoutY="74.0" prefHeight="350.0" prefWidth="851.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="titlecol" onEditCommit="#handleEditActionTitle" prefWidth="209.0" text="title" />
+          <TableColumn fx:id="qualitycol" onEditCommit="#handleEditActionQuantity" prefWidth="217.0" text="quantity" />
+            <TableColumn fx:id="quantitycol" onEditCommit="#handleEditActionQuality" prefWidth="208.0" text="quality" />
+            <TableColumn fx:id="pricecol" onEditCommit="#handleEditActionPrice" prefWidth="214.0" text="price" />
+        </columns>
+      </TableView>
+      <HBox layoutX="-5.0" layoutY="426.0" prefHeight="47.0" prefWidth="851.0">
+         <children>
+            <TextField fx:id="titleFld" prefHeight="39.0" prefWidth="140.0" promptText="Title" />
+            <TextField fx:id="quantityFld" prefHeight="39.0" prefWidth="159.0" promptText="quantity" />
+            <TextField fx:id="qualityFld" prefHeight="39.0" prefWidth="176.0" promptText="quality" />
+            <TextField fx:id="priceFld" prefHeight="39.0" prefWidth="157.0" promptText="price" />
+            <Button fx:id="add" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="46.0" prefWidth="120.0" text="Add" />
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#delBook" prefHeight="46.0" prefWidth="101.0" text="Delete" />
+         </children>
+      </HBox>
+      <Label fx:id="message" layoutX="14.0" prefHeight="72.0" prefWidth="404.0" />
+      <Label fx:id="error" layoutX="435.0" prefHeight="72.0" prefWidth="411.0" />
+   </children>
+</AnchorPane>
